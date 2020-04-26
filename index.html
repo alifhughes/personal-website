@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+  <script src="https://kit.fontawesome.com/54278919a8.js" crossorigin="anonymous"></script>
   <title>Alistair Hughes</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
@@ -8,7 +10,24 @@
     height: 100%;
     margin: 0;
   }
+  p {
+    font-family: Calibri, sans-serif;
+    color: white;
+    font-size: 25px;
+  }
+  .container {
 
+    /* Need to centre this container */
+
+    display: flex;              /* establish flex container */
+    flex-direction: column;     /* stack flex items vertically */
+    justify-content: center;    /* center items vertically, in this case */
+    align-items: center;        /* center items horizontally, in this case */
+    height: 300px;
+  }
+  .box {
+      text-align: center;
+  }
   .bg {
     /* The image used */
     background-image: url("img/johannes-plenio-HcNVBkPYT4w-unsplash.jpg");
@@ -21,10 +40,51 @@
     background-repeat: no-repeat;
     background-size: cover;
   }
+  .avatar-img {
+    width: auto;
+    max-width: 40%;
+    height: auto;
+    border-radius: 50%;
+  }
+  .fa-linkedin {
+    margin: 7px;
+    color: #FFFFFF;
+  }
+  .fa-linkedin:hover {
+    color: #0e76a8;
+  }
+  .fa-github {
+    margin: 7px;
+    color: #FFFFFF;
+  }
+  .fa-github:hover {
+    color: #808080;
+  }
   </style>
 </head>
 <body>
 
-<div class="bg"></div>
+<div class="bg container">
+  <div class="container">
+
+      <div class="box">
+          <img class="avatar-img animated fadeInDown" src="img/avatar.jpg" alt="Alistair Hughes Avatar"> 
+      </div>
+      <div class="box animated fadeInDown">
+          <p>Alistair Hughes</p>
+      </div>
+      <div class="box animated fadeInRight delay-1s">
+          <p>Software Engineer | London</p>
+      </div>
+      <hr>
+      <div class="box animated fadeInLeft delay-1s">
+        <a href="https://github.com/alifhughes" target="_blank"><i class="fab fa-github fa-4x"></i></a>
+        <a href="https://www.linkedin.com/in/alistairfhughes/" target="_blank"><i class="fab fa-linkedin fa-4x white"></i></a>
+      </div>
+
+  </div>
+</div>
 </body>
 </html>
+
+
